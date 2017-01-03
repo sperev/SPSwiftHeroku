@@ -1,6 +1,8 @@
 import Foundation
 import Kitura
 
+print("app started")
+
 let router: Router = Router()
 
 router.get("/") { _, response, next in
@@ -8,4 +10,5 @@ router.get("/") { _, response, next in
 }
 
 Kitura.addHTTPServer(onPort: 8080, with: router)
+print("server added at 8080")
 Kitura.run()
